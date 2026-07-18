@@ -157,13 +157,22 @@ mtstomp4/
 
 ### 카메라 경로 변경
 
-`main.py` 상단의 상수를 수정하세요:
+> [!WARNING]
+> 기본 경로 `J:\PRIVATE\AVCHD\BDMV\STREAM`은 **개발자 개인 환경에 맞춘 설정**입니다.
+> 다른 사용자는 자신의 캠코더가 연결되는 **드라이브 문자**에 맞게 반드시 변경해야 합니다.
+> 예: `E:\`, `F:\` 등 — 내 PC에서 캠코더가 어떤 드라이브로 잡히는지 확인 후 수정하세요.
+
+`main.py` 상단의 상수를 자신의 환경에 맞게 수정하세요:
 
 ```python
-# 카메라 기본 경로
-CAMERA_STREAM_PATH = r"J:\PRIVATE\AVCHD\BDMV\STREAM"
+# 카메라 기본 경로 — 자신의 드라이브 문자로 변경!
+CAMERA_STREAM_PATH = r"J:\PRIVATE\AVCHD\BDMV\STREAM"  # ← J:를 본인 드라이브로 변경
 SCAN_INTERVAL_MS = 3000  # 스캔 주기 (밀리초)
 ```
+
+> [!TIP]
+> 대부분의 AVCHD 캠코더는 `드라이브:\PRIVATE\AVCHD\BDMV\STREAM` 경로를 사용합니다.
+> 드라이브 문자만 본인 환경에 맞게 바꾸면 됩니다.
 
 ### FFmpeg 배치
 
